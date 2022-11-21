@@ -1,0 +1,8 @@
+.a3media-main{
+  padding: 30px 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  min-height: 100vh;
+}

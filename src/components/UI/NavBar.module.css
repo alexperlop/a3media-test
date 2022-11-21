@@ -1,0 +1,15 @@
+.a3media-nav__container{
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 15px 30px;
+  background-color: black;
+}
+.a3media-nav__figure{
+  width: 20%;
+}
+.a3media-nav__logo{
+  width: 120px;
+  background-color: black;
+  height: 40px;
+}
