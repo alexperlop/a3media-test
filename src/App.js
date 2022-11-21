@@ -1,24 +1,34 @@
-import logo from './logo.svg'
-import './App.css'
+import React, { useEffect, useState } from 'react'
+import useHttp from './hooks/useHttp'
 
-function App () {
+const App = () => {
+  const [tasks, setTasks] = useState([])
+  console.log('🚀 ~ file: App.js ~ line 9 ~ App ~ tasks', tasks)
+
+  const { isLoading, error, sendRequest: fetchTasks } = useHttp()
+  console.log('🚀 ~ file: App.js ~ line 11 ~ App ~ error', error)
+  console.log('🚀 ~ file: App.js ~ line 11 ~ App ~ isLoading', isLoading)
+
+  useEffect(() => {
+    const transformTasks = (tasksObj) => {
+      const loadedTasks = []
+
+      for (const taskKey in tasksObj) {
+        loadedTasks.push({ id: tasksObj[taskKey]._id, name: tasksObj[taskKey].name })
+      }
+
+      setTasks(loadedTasks)
+    }
+
+    fetchTasks(
+      { url: '/sites' },
+      transformTasks
+    )
+  }, [fetchTasks])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+    </React.Fragment>
   )
 }
 
