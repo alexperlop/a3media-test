@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches');
+
+.a3media-form__edit{
+  background-color: white;
+  border: 1px solid grey;
+  padding: 120px 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 3;
+  box-shadow: 7px 7px 16px 4px rgb(255 255 255 / 20%);
+  border-radius: 5%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  min-width: 50%;
+}
+label{
+  font-family:'Staatliches';
+  color:black;
+  font-size: 28px;
+  margin-top: 20px;
+}
+input,textarea{
+  padding: 15px 10px;
+  border: 2px solid grey;
+}
+textarea {
+  resize: none;
+  padding: 15px 10px;
+  margin-bottom: 30px;
+}
+.a3media-form__delete, .a3media-form__save{
+  padding: 5px 14px;
+  color: white;
+  border:1px solid white;
+  border-radius: 8px;
+  margin: 10px;
+}
+.a3media-form__save{
+  background-color: rgb(97, 110, 97);
+}
+.a3media-form__delete{
+  background-color: rgb(254, 1, 1);
+}

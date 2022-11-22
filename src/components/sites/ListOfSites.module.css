@@ -8,6 +8,9 @@
   margin: 0;
   padding: 0;
 }
+a:hover{
+  text-decoration: none;
+}
 .a3media-list__item{
   width: 300px;
   height: 440px;

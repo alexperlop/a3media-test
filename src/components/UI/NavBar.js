@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import classes from './NavBar.module.css'
 
 const Navbar = () => {
@@ -5,9 +6,11 @@ const Navbar = () => {
 
   return <header>
     <nav className={classes['a3media-nav__container']}>
-      <figure className={classes['a3media-nav__figure']}>
-        <img src={imgUrl} alt="a3media-logo" className={classes['a3media-nav__logo']} />
-      </figure>
+      <Link to={'/home'}>
+        <figure className={classes['a3media-nav__figure']}>
+          <img src={imgUrl} alt="a3media-logo" className={classes['a3media-nav__logo']} />
+        </figure>
+      </Link>
     </nav>
   </header>
 }
