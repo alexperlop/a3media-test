@@ -38,8 +38,18 @@ const SiteDetail = (props) => {
       },
       body: newData
     }, getSite)
-    console.log('nueva data', newData)
     setIsEditing(false)
+  }
+
+  const deleteDataHandler = (siteId) => {
+    setErrorMsg(true)
+    const deleteSite = () => {
+      return siteId
+    }
+    fetchTasks({
+      url: `/site/${params.siteId}`,
+      method: 'DELETE'
+    }, deleteSite)
   }
 
   const editHandler = () => {
@@ -58,12 +68,12 @@ const SiteDetail = (props) => {
     </Link>
     {error && errorMsg && <ErrorMessage message={error} onClose={onCloseHandler} />}
     {isLoading && <Spinner />}
-    {!error && !isLoading &&
+    {!isLoading &&
       <section className={classes['a3media-section__detail']}>
         <h1 className={classes['a3media-section__title']}>{web.name}</h1>
         <p className={classes['a3media-section__description']}>{web.description}</p>
         <button className={classes['a3media-section__edit-btn']} onClick={editHandler}>Editar</button>
-        <button className={classes['a3media-section__delete-btn']}>Eliminar</button>
+        <button className={classes['a3media-section__delete-btn']} onClick={deleteDataHandler}>Eliminar</button>
       </section>
     }
     {isEditing && <EditSiteDetail name={web.name} description={web.description} onSaveEdit={saveDataHandler} onCancelEdit={cancelEditHandler} />}

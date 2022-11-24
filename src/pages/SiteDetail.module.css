@@ -1,18 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu');
+
 section{
-  background-color: grey;
+  background-color: black;
   border: 1.5px solid red;
   border-radius: 5%;
   box-shadow:7px 7px 16px 4px rgb(255 255 255 / 20%);
-  min-width: 70%;
   padding: 60px;
+  font-family:'Ubuntu';
 }
+
 h1, p{
   color: white;
 }
 .a3media-section__back{
+  font-family:'Staatliches';
+  font-size: 35px;
   position: absolute;
   top: 20%;
   right: 5%;
+
 }
 .a3media-section__back:hover{
   text-decoration: none;

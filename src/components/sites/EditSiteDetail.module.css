@@ -16,17 +16,17 @@
   flex-direction: column;
   min-width: 50%;
 }
-label{
+.a3media-form__edit label{
   font-family:'Staatliches';
   color:black;
   font-size: 28px;
   margin-top: 20px;
 }
-input,textarea{
+.a3media-form__edit input,textarea{
   padding: 15px 10px;
   border: 2px solid grey;
 }
-textarea {
+.a3media-form__edit textarea {
   resize: none;
   padding: 15px 10px;
   margin-bottom: 30px;

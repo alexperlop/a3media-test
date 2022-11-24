@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Staatliches');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu');
 .a3media-list{
   display: flex;
   justify-content: center;
@@ -17,7 +18,7 @@ a:hover{
   color: white;
   list-style: none;
   min-height: 80px;
-  background-color: grey;
+  background-color: black;
   margin: 10px;
   display: flex;
   align-items: center;
@@ -32,4 +33,37 @@ a:hover{
 .a3media-list__item:hover{
   scale: 1.05;
   box-shadow:7px 7px 16px 4px rgb(255 255 255 / 20%)
+}
+.a3media-new__post-container{
+  position: absolute;
+  top: 5%;
+  right: 7%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.a3media-new__post:hover{
+  transform: scale(1.2);
+  color: white;
+  border: 1px solid black;
+  background-color: red;
+}
+.a3media-new__post{
+  border-radius: 50%;
+  padding: 5px;
+  font-family:'Staatliches';
+  font-size: 20px;
+  color: red;
+  border: 1px solid red;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.a3media-new__post-text{
+  color: white;
+  margin-right: 10px;
+  font-weight: bold;
+  font-family:'Ubuntu';
 }
