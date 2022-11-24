@@ -1,7 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Staatliches');
-
+.a3media-form__edit-container{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,40%);
+  min-height: 100vh;
+  min-width: 100vw;
+}
 .a3media-form__edit{
-  background-color: white;
+  background-color: black;
   border: 1px solid grey;
   padding: 120px 60px;
   position: absolute;
@@ -17,14 +24,16 @@
   min-width: 50%;
 }
 .a3media-form__edit label{
-  font-family:'Staatliches';
-  color:black;
+  font-family:'Ubuntu';
+  color:white;
   font-size: 28px;
   margin-top: 20px;
 }
 .a3media-form__edit input,textarea{
   padding: 15px 10px;
-  border: 2px solid grey;
+  background-color: black;
+  border-radius: 5px;
+  border: 2px solid white;
 }
 .a3media-form__edit textarea {
   resize: none;
@@ -39,8 +48,43 @@
   margin: 10px;
 }
 .a3media-form__save{
-  background-color: rgb(97, 110, 97);
+  background-color: white;
+  color:green;
+  border: 2px solid green;
+}
+.a3media-form__save:hover{
+  background-color: green;
+  color:white;
+  border: 2px solid white;
 }
 .a3media-form__delete{
-  background-color: rgb(254, 1, 1);
+  background-color: white;
+  color:red;
+  border: 2px solid red;
+}
+.a3media-form__delete:hover{
+  background-color: red;
+  color:white;
+  border: 2px solid white;
+}
+@media screen and (max-width: 576px) {
+  .a3media-form__buttons{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  .a3media-form__save, .a3media-form__delete{
+    width: 100%;
+  }
+  .a3media-form__edit{
+    width: 85%;
+  }
+  .a3media-form__edit label{
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 992px) {
 }

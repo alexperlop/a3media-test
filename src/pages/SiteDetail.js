@@ -64,7 +64,10 @@ const SiteDetail = (props) => {
 
   return <Fragment>
     <Link to={'/home'}>
-      <p className={classes['a3media-section__back']}>Atrás</p>
+      <div className={classes['a3media-section__back']}>
+        <i className="bi bi-skip-backward"></i>
+        <p className={classes['a3media-section__back-text']}>Atrás</p>
+      </div>
     </Link>
     {error && errorMsg && <ErrorMessage message={error} onClose={onCloseHandler} />}
     {isLoading && <Spinner />}
@@ -72,8 +75,14 @@ const SiteDetail = (props) => {
       <section className={classes['a3media-section__detail']}>
         <h1 className={classes['a3media-section__title']}>{web.name}</h1>
         <p className={classes['a3media-section__description']}>{web.description}</p>
-        <button className={classes['a3media-section__edit-btn']} onClick={editHandler}>Editar</button>
-        <button className={classes['a3media-section__delete-btn']} onClick={deleteDataHandler}>Eliminar</button>
+        <button className={classes['a3media-section__edit-btn']} onClick={editHandler}>
+          <span>Editar</span>
+          <i className="bi bi-pen"></i>
+        </button>
+        <button className={classes['a3media-section__delete-btn']} onClick={deleteDataHandler}>
+          <span>Eliminar</span>
+          <i className="bi bi-trash3"></i>
+        </button>
       </section>
     }
     {isEditing && <EditSiteDetail name={web.name} description={web.description} onSaveEdit={saveDataHandler} onCancelEdit={cancelEditHandler} />}

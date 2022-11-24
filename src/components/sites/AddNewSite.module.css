@@ -11,6 +11,7 @@
   min-width: 100vw;
 }
 .a3media-form__post{
+  width: auto;
   background: black;
   position: absolute;
   top: 50%;
@@ -68,4 +69,16 @@
   border:2px solid white;
   color: white;
   background-color: red;
+}
+@media screen and (max-width: 576px) {
+  .a3media-form__post{
+    width: 85%;
+  }
+  .a3media-form__info label{
+    font-size: 20px;
+  }
+  .a3media-form__description, .a3media-form__name{
+    padding: 10px 5px;
+    font-size: 16px;
+  }
 }
