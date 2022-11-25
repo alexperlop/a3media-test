@@ -31,8 +31,12 @@
   font-size: 28px;
   margin-top: 20px;
 }
-.a3media-form__description{
-  margin-bottom: 30px;
+.a3media-form__info p, .a3media-form__button p{
+  margin-top: 10px;
+  font-family:'Ubuntu';
+}
+.a3media-form__button{
+  margin-top: 30px;
 }
 .a3media-form__description, .a3media-form__name{
   min-width: 80px;
